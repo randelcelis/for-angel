@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Angel 🤍</title>
+
+<style>
+  body {
+  margin: 0;
+  font-family: 'Poppins', cursive;
+  background: url('bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+
+.container {
+  padding: 40px 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+h1 {
+  color: #d63384;
+}
+
+p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.heart {
+  position: fixed;
+  bottom: -10px;
+  color: pink;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-800px); opacity: 0; }
+}
+
+button {
+  background: #d63384;
+  color: white;
+  border: none;
+  padding: 15px 25px;
+  border-radius: 30px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.hidden {
+  display: none;
+  margin-top: 30px;
+  font-weight: bold;
+  color: #b3005e;
+}
+  .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  min-height: 100vh;
+}
+  .overlay {
+  background: rgba(0, 0, 0, 0.55);
+backdrop-filter: blur(2px);
+  min-height: 100vh;
+}
+  h1 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 48px;
+  color: #ffd1dc;
+}
+.surprise-text {
+  color: #ffb6c1;      /* soft pink */
+  font-size: 19px;
+  line-height: 1.7;
+}
+.surprise-btn {
+  font-family: 'Great Vibes', cursive;
+  font-size: 24px;
+  background: rgba(214, 51, 132, 0.85);
+  color: #fff;
+  border: none;
+  padding: 16px 28px;
+  border-radius: 40px;
+  cursor: pointer;
+  margin-top: 30px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+</style>
+</head>
+
+<body>
+
+<audio autoplay loop>
+  <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+</audio>
+
+<div class="overlay">
+  <div class="container"<button onclick="playMusic()"></button>
+
+<audio id="bgm" loop>
+  <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+  <h1>Hi my Angel 🤍</h1>
+
+  <p>
+    If you’re reading this, that means you followed the link… and that already makes me smile.
+  </p>
+
+  <p>
+    Gha, I just want you to know how grateful I am for you.
+    In ways you probably don’t even notice, you make my days lighter,
+    my worries quieter, and my heart calmer.
+  </p>
+
+  <p>
+    Loving you doesn’t feel loud or forced.<br>
+    It feels like home.
+  </p>
+
+  <p>
+    Thank you for being patient with me, for understanding me,
+    and for choosing me every day — even when things aren’t perfect.
+  </p>
+
+  <p>
+    This Valentine’s Day, I just want to remind you of one simple truth:<br>
+    <strong>You are deeply loved.</strong><br>
+    By me. Always.
+  </p>
+
+  <p>— Your BibiBoy 🤍</p>
+
+ <button class="surprise-btn" onclick="reveal()">
+  Tap for one last surprise 💖
+</button>
+
+  <div id="surprise" class="hidden surprise-text">
+
+    <p>
+      Langga… this isn’t just a Valentine message.<br><br>
+      It’s my promise — that no matter where life takes us,<br>
+      <strong>I choose you.</strong><br>
+      Again and again.<br><br>
+      Happy Valentine’s Day, my Angel 💕
+    </p>
+  </div>
+</div>
+
+<script>
+function reveal() {
+  document.getElementById("surprise").style.display = "block";
+}
+function playMusic() {
+  const music = document.getElementById("bgm");
+  music.play();
+}
+
+  
+setInterval(() => {
+  const heart = document.createElement("div");
+  heart.className = "heart";
+  heart.innerHTML = "❤";
+  heart.style.left = Math.random() * 100 + "vw";
+  heart.style.fontSize = Math.random() * 20 + 10 + "px";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}, 500);
+</script>
+  </div>
+</div>
+
+</body>
+</html>
